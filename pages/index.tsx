@@ -1,11 +1,10 @@
-import type { NextPage } from 'next'
+import type { NextPage } from 'next';
+import Enter from './enter';
 
 const Home: NextPage = () => {
   return (
-    <div className="bg-red-500">
-      <h1 className="text-black">ghe</h1>
-    </div>
+    <Enter />
   )
 }
 
-export default Home
+export default Home;
