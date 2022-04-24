@@ -1,19 +1,24 @@
 import { useState } from "react";
 
+// tailwind tab color apply fn 
+function cls(...classname:string[]) {
+    return classname.join(" ");
+}
+
 export default function Enter() {
     const [method, setMethod] = useState<"email" | "phone">("email");
     const onEmailClick = () => setMethod("email");
     const onPhoneClick = () => setMethod("phone");
     return (
-        <div>
-        <h3>Enter to Carrot</h3>
-        <div>
-            <div>
-            <h5>Enter using:</h5>
-            <div>
-                <button onClick={onEmailClick}>Email</button>
-                <button onClick={onPhoneClick}>Phone</button>
-            </div>
+        <div className="mt-16">
+        <h3 className="text-3xl font-bold text-center">당근 마켓</h3>
+        <div className="mt-8">
+            <div className="flex flex-col items-center">
+                <h5 className="text-sm font-medium text-gray-500">입장 방식 선택</h5>
+                <div className="grid w-full grid-cols-2 mt-8 border-b">
+                    <button className={ cls("pb-4 font-medium border-b-2" , method === "email" ? "text-orange-500  border-orange-500 " : "border-transparent text-gray-500")} onClick={onEmailClick}>✉이메일</button>
+                    <button className={ cls("pb-4 font-medium border-b-2" , method === "phone" ? "text-orange-500  border-orange-500 " : "border-transparent text-gray-500")} onClick={onPhoneClick}>📞전화번호</button>
+                </div>
             </div>
             <form>
             <label>
