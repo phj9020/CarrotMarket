@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import Enter from './enter';
+
 
 const Home: NextPage = () => {
   return (
