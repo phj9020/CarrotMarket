@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-
+// 프로필 업데이트
 const EditProfile: NextPage = () => {
     return (
         <div className="px-4 py-10 space-y-4">
