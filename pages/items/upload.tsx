@@ -19,23 +19,23 @@ const Upload: NextPage = () => {
                             strokeLinejoin="round"
                         />
                     </svg>
-                    <input type="file" className="hidden" />
+                    <input type="file" accept="image/*" className="hidden" />
                 </label>
             </div>
             <div className="my-5">
-                <label htmlFor="price" className="block mb-1 text-sm font-medium text-gray-700">Price</label>
+                <label htmlFor="price" className="block mb-1 text-sm font-medium text-gray-700">가격</label>
                 <div className="relative flex items-center rounded-md shadow-sm">
                     <div className="absolute left-0 flex items-center justify-center pl-3 pointer-events-none">
-                        <span className="text-sm font-semibold text-gray-500">$</span>
+                        <span className="text-sm font-semibold text-gray-500">₩</span>
                     </div>
-                    <input id="price" className="w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none pl-7 focus:outline-none focus:ring-orange-500 focus:border-orange-500" type="text" placeholder="0.00" />
+                    <input id="price" className="w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none pl-7 focus:outline-none focus:ring-orange-500 focus:border-orange-500" type="text" placeholder="1000" />
                     <div className="absolute right-0 flex items-center justify-center pr-3 pointer-events-none">
-                        <span className="text-xs font-semibold text-gray-500">USD</span>
+                        <span className="text-xs font-semibold text-gray-500">원</span>
                     </div>
                 </div>
             </div>
             <div>
-                <label className="block mb-1 text-sm font-medium text-gray-700">Description</label>
+                <label className="block mb-1 text-sm font-medium text-gray-700">상품 설명</label>
                 <textarea className="w-full mt-1 border-gray-300 rounded-md shadow-sm resize-none focus:ring-orange-500 focus:border-orange-500 focus:outline-none" rows={4} />
             </div>
             <button className="w-full px-4 py-2 mt-5 text-sm font-medium text-white bg-orange-500 border border-transparent rounded-md shadow-sm hover:bg-orange-600 focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 focus:outline-none">상품 등록하기</button>

@@ -3,15 +3,15 @@ import type { NextPage } from 'next';
 
 const Home: NextPage = () => {
   return (
-      <div className="flex flex-col space-y-5 py-10 px-4">
+    <div className="flex flex-col px-4 py-10 space-y-5">
       {[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map((_, i) => (
-        <div key={i} className="flex border-b pb-4 cursor-pointer justify-between">
+        <div key={i} className="flex justify-between pb-4 border-b cursor-pointer">
           <div className="flex space-x-4">
             <div className="w-20 h-20 bg-gray-400 rounded-md" />
-            <div className="py-2 flex flex-col">
+            <div className="flex flex-col py-2">
               <h3 className="text-sm font-medium text-gray-900">New iPhone 14</h3>
               <span className="text-xs text-gray-500">Black</span>
-              <span className="font-medium mt-1 text-gray-900">$95</span>
+              <span className="mt-1 font-medium text-gray-900">$95</span>
             </div>
           </div>
           <div className="flex items-end justify-end space-x-2">
@@ -52,9 +52,9 @@ const Home: NextPage = () => {
           </div>
         </div>
       ))}
-      <button className="fixed hover:bg-orange-500 cursor-pointer transition-colors bottom-24 right-5 bg-orange-400 rounded-full p-4 text-white shadow-xl">
+      <button className="fixed p-4 text-white transition-colors bg-orange-400 rounded-full shadow-xl cursor-pointer hover:bg-orange-500 bottom-24 right-5">
         <svg
-          className="h-6 w-6"
+          className="w-6 h-6"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
