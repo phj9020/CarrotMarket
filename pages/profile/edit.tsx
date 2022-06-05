@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import Layout from '../components/layout';
+import Button from './../components/button';
 // 프로필 업데이트
 const EditProfile: NextPage = () => {
     return (
@@ -27,9 +28,7 @@ const EditProfile: NextPage = () => {
                         <input id="phone" type="tel" required className="w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md rounded-l-none shadow-sm appearance-none focus:outline-none focus:ring-orange-500 focus:border-orange-500" />
                     </div>
                 </div>
-                <button className="w-full px-4 py-2 mt-5 text-sm font-medium text-white bg-orange-500 border border-transparent rounded-md shadow-sm w hover:bg-orange-600 focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 focus:outline-none">
-                    프로필 저장
-                </button>
+                <Button text="프로필 저장" />
             </div>
         </Layout>
 

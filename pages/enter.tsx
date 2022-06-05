@@ -1,5 +1,6 @@
 import { useState } from "react";
 import cls from "../libs/utility";
+import Button from "./components/button";
 
 
 export default function Enter() {
@@ -17,7 +18,7 @@ export default function Enter() {
                         <button className={cls("pb-4 font-medium border-b-2", method === "phone" ? "text-orange-500  border-orange-500 " : "border-transparent text-gray-500")} onClick={onPhoneClick}>📞전화번호</button>
                     </div>
                 </div>
-                <form className="flex flex-col mt-8">
+                <form className="flex flex-col mt-8 space-y-4">
                     <label className="text-sm font-medium, text-gray-700">
                         {method === "email" ? "Email address" : null}
                         {method === "phone" ? "Phone number" : null}
@@ -31,10 +32,10 @@ export default function Enter() {
                             </div>
                         ) : null}
                     </div>
-                    <button className="px-4 py-2 mt-5 text-sm font-medium text-white bg-orange-500 border border-transparent rounded-md shadow-sm hover:bg-orange-600 focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 focus:outline-none">
-                        {method === "email" ? "Get login link" : null}
-                        {method === "phone" ? "Get one-time password" : null}
-                    </button>
+                   
+                        {method === "email" ? <Button text={"이메일로 로그인"} /> : null}
+                        {method === "phone" ? <Button text={"핸드폰 번호로 로그인"} /> : null}
+              
                 </form>
                 <div className="mt-8">
                     <div className="relative">

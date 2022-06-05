@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import Button from '../components/button';
 import Layout from '../components/layout';
 
 const Create: NextPage = () => {
@@ -27,7 +28,7 @@ const Create: NextPage = () => {
                     <label htmlFor="productDescription" className="block mb-1 text-sm font-medium text-gray-700">상품 설명</label>
                     <textarea id="productDescription" className="w-full mt-1 border-gray-300 rounded-md shadow-sm resize-none focus:ring-orange-500 focus:border-orange-500 focus:outline-none" rows={4} placeholder="상품에 대한 상세한 설명을 달아주세요" />
                 </div>
-                <button className="w-full px-4 py-2 mt-5 text-sm font-medium text-white bg-orange-500 border border-transparent rounded-md shadow-sm hover:bg-orange-600 focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 focus:outline-none">라이브 시작하기</button>
+                <Button text="라이브 시작하기"/>
             </div>
         </Layout>
     );
