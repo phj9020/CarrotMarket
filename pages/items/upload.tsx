@@ -1,8 +1,10 @@
 import type { NextPage } from 'next';
+import Layout from '../components/layout';
 
 const Upload: NextPage = () => {
     return (
-        <div className="px-4 py-16 space-y-5">
+        <Layout title="내 물건 팔기" canGoBack>
+            <div className="px-4 py-16 space-y-5">
             <div>
                 <label  className="flex items-center justify-center w-full h-48 text-gray-600 border-2 border-gray-300 border-dashed rounded-md cursor-pointer hover:text-orange-500 hover:transition-colors hover:border-orange-300">
                     <svg
@@ -44,8 +46,10 @@ const Upload: NextPage = () => {
                 <label htmlFor="productDescription"  className="block mb-1 text-sm font-medium text-gray-700">상품 설명</label>
                 <textarea id="productDescription" className="w-full mt-1 border-gray-300 rounded-md shadow-sm resize-none focus:ring-orange-500 focus:border-orange-500 focus:outline-none" rows={4} placeholder="상품에 대한 상세한 설명을 달아주세요" />
             </div>
-            <button className="w-full px-4 py-2 mt-5 text-sm font-medium text-white bg-orange-500 border border-transparent rounded-md shadow-sm hover:bg-orange-600 focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 focus:outline-none">상품 등록하기</button>
+            <button className="w-full px-4 py-2 mt-5 text-sm font-medium text-white bg-orange-500 border border-transparent rounded-md shadow-sm hover:bg-orange-600 focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 focus:outline-none">완료</button>
         </div>
+        </Layout>
+        
     )
 }
 

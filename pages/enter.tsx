@@ -1,9 +1,6 @@
 import { useState } from "react";
+import cls from "../libs/utility";
 
-// tailwind tab color apply fn 
-function cls(...classname: string[]) {
-    return classname.join(" ");
-}
 
 export default function Enter() {
     const [method, setMethod] = useState<"email" | "phone">("email");
