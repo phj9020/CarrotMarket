@@ -1,9 +1,11 @@
 import type { NextPage } from 'next';
+import HeadInfo from '../components/head';
 import Layout from '../components/layout';
 
 const ChatRoom: NextPage = () => {
     return (
         <Layout title="뒤로" canGoBack>
+            <HeadInfo title="이웃 채팅 | 캐럿마켓" keywordContent="Next.js, tailwind, Phj9020" descriptionContent="캐럿마켓 이웃과 채팅" />
             <div className="px-4 py-16 space-y-4">
                 {/* person1 */}
                 <div className="flex items-start space-x-2">

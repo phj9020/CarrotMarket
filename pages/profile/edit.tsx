@@ -1,10 +1,12 @@
 import type { NextPage } from 'next';
+import HeadInfo from '../components/head';
 import Layout from '../components/layout';
 import Button from './../components/button';
-// 프로필 업데이트
+
 const EditProfile: NextPage = () => {
     return (
         <Layout title="프로필 편집" canGoBack>
+            <HeadInfo title="프로필 편집 | 캐럿마켓" keywordContent="Next.js, tailwind, Phj9020" descriptionContent="캐럿마켓 프로필 편집" />
             <div className="px-4 py-10 space-y-4">
                 <div className="flex flex-col items-center justify-center space-y-4">
                     <div className="rounded-full h-28 w-28 bg-slate-600" />

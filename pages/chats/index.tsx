@@ -1,9 +1,11 @@
 import type { NextPage } from 'next';
+import HeadInfo from '../components/head';
 import Layout from '../components/layout';
 
 const Chats: NextPage = () => {
     return (
         <Layout title="채팅" hasTabBar>
+            <HeadInfo title="채팅 | 캐럿마켓" keywordContent="Next.js, tailwind, Phj9020" descriptionContent="캐럿마켓 채팅" />
             <div className="pb-10 divide-y-[1px]">
                 {[1,1,1,1,1].map((_,i) => (
                     <div key={i} className="flex items-center px-4 py-3 space-x-3 cursor-pointer">

@@ -1,10 +1,12 @@
 import type { NextPage } from 'next';
 import Button from '../components/button';
+import HeadInfo from '../components/head';
 import Layout from '../components/layout';
 
 const Upload: NextPage = () => {
     return (
         <Layout title="내 물건 팔기" canGoBack>
+            <HeadInfo title="업로드 | 캐럿마켓" keywordContent="Next.js, tailwind, Phj9020" descriptionContent="캐럿마켓 내 물건 등록" />
             <div className="px-4 py-16 space-y-5">
             <div>
                 <label  className="flex items-center justify-center w-full h-48 text-gray-600 border-2 border-gray-300 border-dashed rounded-md cursor-pointer hover:text-orange-500 hover:transition-colors hover:border-orange-300">

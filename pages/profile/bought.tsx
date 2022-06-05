@@ -1,9 +1,11 @@
 import type { NextPage } from 'next';
+import HeadInfo from '../components/head';
 import Layout from '../components/layout';
-// 구매내역
+
 const Bought: NextPage = () => {
     return (
         <Layout title="구매 내역" canGoBack hasTabBar>
+            <HeadInfo title="구매내역 | 캐럿마켓" keywordContent="Next.js, tailwind, Phj9020" descriptionContent="캐럿마켓 내 구매내역" />
             <div className="flex flex-col px-4 pb-4 space-y-5">
                 {[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map((_, i) => (
                     <div key={i} className="flex justify-between pb-4 border-b cursor-pointer">

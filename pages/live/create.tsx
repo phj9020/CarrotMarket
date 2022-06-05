@@ -1,10 +1,12 @@
 import type { NextPage } from 'next';
 import Button from '../components/button';
 import Layout from '../components/layout';
+import HeadInfo from './../components/head';
 
 const Create: NextPage = () => {
     return (
         <Layout title="라이브 만들기" canGoBack>
+             <HeadInfo title="라이브 만들기 | 캐럿마켓" keywordContent="Next.js, tailwind, Phj9020" descriptionContent="캐럿마켓 내 라이브 만들기" />
             <div className="px-4 py-16 space-y-5">
                 <div>
                     <label htmlFor="streamTitle" className="block mb-1 text-sm font-medium text-gray-700">라이브 제목</label>

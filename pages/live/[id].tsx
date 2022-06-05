@@ -1,9 +1,11 @@
 import type { NextPage } from 'next';
+import HeadInfo from '../components/head';
 import Layout from '../components/layout';
 
 const StreamDetail: NextPage = () => {
     return (
         <Layout title="뒤로" canGoBack>
+             <HeadInfo title="라이브 시청 | 캐럿마켓" keywordContent="Next.js, tailwind, Phj9020" descriptionContent="캐럿마켓 라이브 시청" />
             <div className="px-4 pb-10" >
             <div className="w-full rounded-md shadow-sm bg-slate-300 aspect-video" />
             <div className="mt-5">

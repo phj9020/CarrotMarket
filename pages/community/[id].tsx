@@ -1,9 +1,11 @@
 import type { NextPage } from 'next';
+import HeadInfo from '../components/head';
 import Layout from './../components/layout';
 
 const CommunityPostDetail: NextPage = () => {
     return (
         <Layout title="뒤로" canGoBack>
+             <HeadInfo title="커뮤니티 | 캐럿마켓" keywordContent="Next.js, tailwind, Phj9020" descriptionContent="캐럿마켓 카뮤니티" />
             <div>
                 {/* Tag component */}
                 <span className="inline-flex items-center ml-4 my-2.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">동네질문</span>

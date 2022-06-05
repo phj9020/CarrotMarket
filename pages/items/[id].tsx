@@ -1,10 +1,12 @@
 import type { NextPage } from 'next';
 import Button from '../components/button';
 import Layout from '../components/layout';
+import HeadInfo from './../components/head';
 
 const ItemDetail: NextPage = () => {
     return (
         <Layout title="뒤로" canGoBack>
+             <HeadInfo title="상품 상세 | 캐럿마켓" keywordContent="Next.js, tailwind, Phj9020" descriptionContent="캐럿마켓 상품 상세 페이지" />
             <div className="px-4 pb-10">
                 <div className="mb-8">
                     <div className="h-96 bg-slate-300" />

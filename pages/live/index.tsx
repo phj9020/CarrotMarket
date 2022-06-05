@@ -2,10 +2,12 @@ import type { NextPage } from 'next';
 import Link from "next/link";
 import Layout from '../components/layout';
 import FloatingButton from './../components/floating-button';
+import HeadInfo from './../components/head';
 
 const Stream: NextPage = () => {
     return (
         <Layout title="라이브" hasTabBar>
+            <HeadInfo title="라이브 | 캐럿마켓" keywordContent="Next.js, tailwind, Phj9020" descriptionContent="캐럿마켓 라이브" />
             <div className="pb-10 space-y-4 divide-y-2 ">
                 {[1, 2, 3, 4, 5].map((_, i) => (
                     <div className="px-4 pt-4" key={i}>

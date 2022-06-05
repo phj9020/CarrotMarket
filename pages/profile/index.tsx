@@ -1,10 +1,12 @@
 import type { NextPage } from 'next';
 import Link from 'next/link';
 import Layout from '../components/layout';
+import HeadInfo from './../components/head';
 
 const Profile: NextPage = () => {
     return (
         <Layout title="나의 당근 프로필" hasTabBar>
+            <HeadInfo title="프로필 | 캐럿마켓" keywordContent="Next.js, tailwind, Phj9020" descriptionContent="캐럿마켓 내 프로필" />
             <div className="px-4 py-10">
                 <div className="flex items-center space-x-3">
                     <div className="w-16 h-16 rounded-full bg-slate-400" />

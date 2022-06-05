@@ -2,11 +2,13 @@ import type { NextPage } from 'next';
 import Link from "next/link";
 import Layout from './components/layout';
 import FloatingButton from './components/floating-button';
+import HeadInfo from './components/head';
 
 
 const Home: NextPage = () => {
   return (
     <Layout title="홈" hasTabBar >
+      <HeadInfo title="홈 | 캐럿마켓" keywordContent="Next.js, tailwind, Phj9020" descriptionContent="캐럿마켓 클론사이트에 오신것을 환경합니다" />
       <div className="flex flex-col px-4 space-y-5">
         {[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map((_, i) => (
           <div key={i} className="flex justify-between pb-4 border-b cursor-pointer">

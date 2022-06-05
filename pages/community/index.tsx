@@ -1,10 +1,12 @@
 import type { NextPage } from 'next';
 import FloatingButton from '../components/floating-button';
 import Layout from '../components/layout';
+import HeadInfo from './../components/head';
 
 const Community: NextPage = () => {
     return (
-        <Layout title="나의 동네" hasTabBar>
+        <Layout title="동네생활" hasTabBar>
+            <HeadInfo title="동네생활 | 캐럿마켓" keywordContent="Next.js, tailwind, Phj9020" descriptionContent="캐럿마켓 동네 커뮤니티" />
             <div className="px-4 py-4 space-y-8">
                 {[1, 2, 3, 4, 5].map((_, i) => (
                     <div key={i} className="flex flex-col items-start cursor-pointer">
