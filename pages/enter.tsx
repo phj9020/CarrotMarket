@@ -15,13 +15,13 @@ export default function Enter() {
                     <h5 className="text-sm font-medium text-gray-500">입장 방식 선택</h5>
                     <div className="grid w-full grid-cols-2 mt-8 border-b">
                         <button className={cls("pb-4 font-medium border-b-2", method === "email" ? "text-orange-500  border-orange-500 " : "border-transparent text-gray-500")} onClick={onEmailClick}>✉이메일</button>
-                        <button className={cls("pb-4 font-medium border-b-2", method === "phone" ? "text-orange-500  border-orange-500 " : "border-transparent text-gray-500")} onClick={onPhoneClick}>📞전화번호</button>
+                        <button className={cls("pb-4 font-medium border-b-2", method === "phone" ? "text-orange-500  border-orange-500 " : "border-transparent text-gray-500")} onClick={onPhoneClick}>📞핸드폰 번호</button>
                     </div>
                 </div>
                 <form className="flex flex-col mt-8 space-y-4">
                     <label className="text-sm font-medium, text-gray-700">
-                        {method === "email" ? "Email address" : null}
-                        {method === "phone" ? "Phone number" : null}
+                        {method === "email" ? "이메일 주소" : null}
+                        {method === "phone" ? "핸드폰 번호" : null}
                     </label>
                     <div className="mt-1">
                         {method === "email" ? <input type="email" className="w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none focus:outline-none focus:ring-orange-500 focus:border-orange-500" required /> : null}
@@ -32,10 +32,8 @@ export default function Enter() {
                             </div>
                         ) : null}
                     </div>
-                   
-                        {method === "email" ? <Button text={"이메일로 로그인"} /> : null}
-                        {method === "phone" ? <Button text={"핸드폰 번호로 로그인"} /> : null}
-              
+                    {method === "email" ? <Button text="이메일로 입장하기" /> : null}
+                    {method === "phone" ? <Button text="핸드폰 번호로 입장하기" /> : null}
                 </form>
                 <div className="mt-8">
                     <div className="relative">
