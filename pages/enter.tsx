@@ -1,6 +1,8 @@
 import { useState } from "react";
 import cls from "../libs/utility";
 import Button from "./components/button";
+import HeadInfo from "./components/head";
+import Input from "./components/input";
 
 
 export default function Enter() {
@@ -9,7 +11,8 @@ export default function Enter() {
     const onPhoneClick = () => setMethod("phone");
     return (
         <div className="px-4 mt-16">
-            <h3 className="text-3xl font-bold text-center">당근 마켓</h3>
+            <HeadInfo title="입장 | 캐럿마켓" descriptionContent="캐럿마켓에 오신것을 환영합니다" keywordContent="중고거래" />
+            <h3 className="text-3xl font-bold text-center">캐럿마켓</h3>
             <div className="mt-8">
                 <div className="flex flex-col items-center">
                     <h5 className="text-sm font-medium text-gray-500">입장 방식 선택</h5>
@@ -19,19 +22,8 @@ export default function Enter() {
                     </div>
                 </div>
                 <form className="flex flex-col mt-8 space-y-4">
-                    <label className="text-sm font-medium, text-gray-700">
-                        {method === "email" ? "이메일 주소" : null}
-                        {method === "phone" ? "핸드폰 번호" : null}
-                    </label>
-                    <div className="mt-1">
-                        {method === "email" ? <input type="email" className="w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none focus:outline-none focus:ring-orange-500 focus:border-orange-500" required /> : null}
-                        {method === "phone" ? (
-                            <div className="flex rounded-md shadow-sm">
-                                <span className="flex items-center justify-center px-3 text-sm text-gray-500 border border-r-0 border-gray-300 select-none rounded-l-md bg-gray-50">+82</span>
-                                <input type="tel" required className="w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md rounded-l-none shadow-sm appearance-none focus:outline-none focus:ring-orange-500 focus:border-orange-500" />
-                            </div>
-                        ) : null}
-                    </div>
+                    {method === "email" ? <Input type="email" label="이메일" name="email" kind="text" /> : null}
+                    {method === "phone" ? <Input type="tel" label="휴대전화" name="phone" kind="phone" /> : null}
                     {method === "email" ? <Button text="이메일로 입장하기" /> : null}
                     {method === "phone" ? <Button text="핸드폰 번호로 입장하기" /> : null}
                 </form>
