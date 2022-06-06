@@ -16,9 +16,11 @@ const EditProfile: NextPage = () => {
                         <input id="picture" type="file" className="hidden" accept="image/*" />
                     </label>
                 </div>
-                <Input type="email" label="이메일" name="email" kind="text" />
-                <Input type="tel" label="휴대전화" name="phone" kind="phone" /> 
-                <Button text="프로필 저장" />
+                <form className="flex flex-col mt-8 space-y-4">
+                    <Input type="email" label="이메일" name="email" kind="text" required />
+                    <Input type="tel" label="휴대전화" name="phone" kind="phone" required /> 
+                    <Button text="프로필 저장" />
+                </form>
             </div>
         </Layout>
 

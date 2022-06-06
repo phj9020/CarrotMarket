@@ -22,8 +22,8 @@ export default function Enter() {
                     </div>
                 </div>
                 <form className="flex flex-col mt-8 space-y-4">
-                    {method === "email" ? <Input type="email" label="이메일" name="email" kind="text" /> : null}
-                    {method === "phone" ? <Input type="tel" label="휴대전화" name="phone" kind="phone" /> : null}
+                    {method === "email" ? <Input type="email" label="이메일" name="email" kind="text" required /> : null}
+                    {method === "phone" ? <Input type="tel" label="휴대전화" name="phone" kind="phone" required /> : null}
                     {method === "email" ? <Button text="이메일로 입장하기" /> : null}
                     {method === "phone" ? <Button text="핸드폰 번호로 입장하기" /> : null}
                 </form>
