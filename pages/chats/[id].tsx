@@ -1,34 +1,16 @@
 import type { NextPage } from 'next';
 import HeadInfo from '../components/head';
 import Layout from '../components/layout';
+import Message from './../components/message';
 
 const ChatRoom: NextPage = () => {
     return (
         <Layout title="뒤로" canGoBack>
             <HeadInfo title="이웃 채팅 | 캐럿마켓" keywordContent="Next.js, tailwind, Phj9020" descriptionContent="캐럿마켓 이웃과 채팅" />
-            <div className="px-4 py-16 space-y-4">
-                {/* person1 */}
-                <div className="flex items-start space-x-2">
-                    <div className="w-8 h-8 rounded-full bg-slate-400" />
-                    <div className="w-1/2 p-2 text-sm text-gray-700 border border-gray-300 rounded-md">
-                        <p>얼마에 파시나요?</p>
-                    </div>
-                </div>
-                {/* person2 */}
-                <div className="flex flex-row-reverse items-start space-x-2 space-x-reverse">
-                    <div className="w-8 h-8 rounded-full bg-slate-400" />
-                    <div className="w-1/2 p-2 text-sm text-gray-700 border border-gray-300 rounded-md">
-                        <p>2000원 생각해요</p>
-                    </div>
-                </div>
-                {/* person1 */}
-                <div className="flex items-start space-x-2">
-                    <div className="w-8 h-8 rounded-full bg-slate-400" />
-                    <div className="w-1/2 p-2 text-sm text-gray-700 border border-gray-300 rounded-md">
-                        <p>거래 하시죠</p>
-                    </div>
-                </div>
-                {/* floating bottom chat input */}
+            <div className="px-4 pt-4 pb-16 space-y-4">
+                <Message message="얼마에 파시나요?" />
+                <Message message="2000원 생각해요" reversed />
+                {/*chat input */}
                 <div className="fixed left-0 right-0 w-full max-w-md mx-auto bottom-4">
                     <div className="relative flex items-center">
                         <input type="text" className="w-full pr-12 border-gray-300 rounded-full shadow-sm focus:ring-orange-500 focus:outline-none focus:border-orange-500" />
