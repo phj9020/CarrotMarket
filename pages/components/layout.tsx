@@ -3,15 +3,6 @@ import { useRouter } from "next/router";
 import cls from "../../libs/utility";
 import { useEffect, useState } from 'react';
 
-// 할 일 : REACT COMPONENT로 쪼개기, 
-// Button 컴포넌트 (o)
-// 홈의 상품 컴포넌트,
-// 동네생활의 질문 컴포넌트, 태그 컴포넌트  
-// chat 컴포넌트, 
-// 라이브 컴포넌트, 
-// 답글 컴포넌트 apply to community/1 
-// 프로필 컴포넌트(apply to community/1 과 페이지의 프로필), 
-// 프로필(판매내역, 구매내역, 관심 목록) 컴포넌트
 
 interface LayoutPpops {
     title?: string;

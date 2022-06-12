@@ -2,59 +2,62 @@ import type { NextPage } from 'next';
 import FloatingButton from '../components/floating-button';
 import Layout from '../components/layout';
 import HeadInfo from './../components/head';
+import Link from "next/link";
 
 const Community: NextPage = () => {
     return (
         <Layout title="동네생활" hasTabBar>
             <HeadInfo title="동네생활 | 캐럿마켓" keywordContent="Next.js, tailwind, Phj9020" descriptionContent="캐럿마켓 동네 커뮤니티" />
-            <div className="px-4 py-4 space-y-8">
-                {[1, 2, 3, 4, 5].map((_, i) => (
-                    <div key={i} className="flex flex-col items-start cursor-pointer">
-                        <span className="flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">동네질문</span>
-                        <div className="mt-2 text-gray-700">
-                            <span className="font-medium text-orange-500">질문. </span>강아지 동물 병원 유명한곳 알려주세요~
-                        </div>
-                        <div className="flex items-center justify-between w-full mt-3 text-xs font-medium text-gray-500">
-                            <span>phj9020</span>
-                            <span>18시간 전</span>
-                        </div>
-                        <div className="w-full flex mt-3 space-x-3 text-gray-700 py-2.5 border-b-[1px] border-gray-300">
-                            <span className="flex items-center space-x-2 text-sm">
-                                <svg
-                                    className="w-4 h-4"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth="2"
-                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                                    ></path>
-                                </svg>
-                                <span>궁금해요 1</span>
-                            </span>
-                            <span className="flex items-center space-x-2 text-sm">
-                                <svg
-                                    className="w-4 h-4"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth="2"
-                                        d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-                                    ></path>
-                                </svg>
-                                <span>답변 1</span>
-                            </span>
-                        </div>
-                    </div>
+            <div className="px-4 py-4 space-y-8 ">
+                {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((_, i) => (
+                    <Link href={`/community/${i}`} key={i} >
+                        <a className="flex flex-col items-start cursor-pointer border-b-[1px]">
+                            <span className="flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">동네질문</span>
+                            <div className="mt-2 text-gray-700">
+                                <span className="font-medium text-orange-500">질문. </span>강아지 동물 병원 유명한곳 알려주세요~
+                            </div>
+                            <div className="flex items-center justify-between w-full mt-3 text-xs font-medium text-gray-500">
+                                <span>phj9020</span>
+                                <span>18시간 전</span>
+                            </div>
+                            <div className="w-full flex mt-3 space-x-3 text-gray-700 py-2.5 border-gray-300">
+                                <span className="flex items-center space-x-2 text-sm">
+                                    <svg
+                                        className="w-4 h-4"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth="2"
+                                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                                        ></path>
+                                    </svg>
+                                    <span>궁금해요 1</span>
+                                </span>
+                                <span className="flex items-center space-x-2 text-sm">
+                                    <svg
+                                        className="w-4 h-4"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth="2"
+                                            d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                                        ></path>
+                                    </svg>
+                                    <span>답변 1</span>
+                                </span>
+                            </div>
+                        </a>
+                    </Link>
 
                 ))}
                 <FloatingButton href="/community/write">
