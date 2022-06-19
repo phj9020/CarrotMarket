@@ -1,5 +1,7 @@
 import type { NextPage } from 'next';
+import Button from '../components/button';
 import HeadInfo from '../components/head';
+import Textarea from '../components/textarea';
 import Layout from './../components/layout';
 
 const CommunityPostDetail: NextPage = () => {
@@ -69,9 +71,9 @@ const CommunityPostDetail: NextPage = () => {
                         </div>
                     </div>
                 </div>
-                <div className="px-4">
-                    <textarea className="w-full mt-1 border-gray-300 rounded-md shadow-sm resize-none focus:ring-orange-500 focus:border-orange-500 focus:outline-none" rows={4} placeholder="이웃을 위한 답변을 달아주세요" />
-                    <button className="w-full px-4 py-2 mt-2 text-sm font-medium text-white bg-orange-500 border border-transparent rounded-md shadow-sm hover:bg-orange-600 focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 focus:outline-none">답변 등록하기</button>
+                <div className="px-4 space-y-5">
+                    <Textarea placeholder="이웃을 위한 답변을 달아주세요." />
+                    <Button text="답변 등록하기" />
                 </div>
             </div>
         </Layout>

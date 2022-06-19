@@ -5,7 +5,7 @@ import HeadInfo from './../components/head';
 
 const Profile: NextPage = () => {
     return (
-        <Layout title="나의 당근 프로필" hasTabBar>
+        <Layout title="나의 캐럿 프로필" hasTabBar>
             <HeadInfo title="프로필 | 캐럿마켓" keywordContent="Next.js, tailwind, Phj9020" descriptionContent="캐럿마켓 내 프로필" />
             <div className="px-4 py-10">
                 <div className="flex items-center space-x-3">
