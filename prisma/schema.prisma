@@ -1,13 +1,16 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
+// referentialIntegirty : 각 모델간의 foreign key가 존재하지 않아도 그 객체가 존재하도록  planetscale의 vitess특성
 generator client {
   provider = "prisma-client-js"
+  previewFeatures = ["referentialIntegrity"]
 }
 
 datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
+  referentialIntegrity = "prisma"
 }
 
 // To do : DB setup
