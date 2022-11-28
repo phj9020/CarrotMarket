@@ -4,8 +4,10 @@ import Button from "./components/button";
 import HeadInfo from "./components/head";
 import Input from "./components/input";
 
+type MethodType = "email" | "phone"; 
+
 export default function Enter() {
-  const [method, setMethod] = useState<"email" | "phone">("email");
+  const [method, setMethod] = useState<MethodType>("email");
   const onEmailClick = () => setMethod("email");
   const onPhoneClick = () => setMethod("phone");
   return (
