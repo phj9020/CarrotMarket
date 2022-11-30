@@ -3,6 +3,7 @@ import cls from "../libs/utility";
 import Button from "./components/button";
 import HeadInfo from "./components/head";
 import Input from "./components/input";
+import Forms from "./forms";
 
 type MethodType = "email" | "phone"; 
 
